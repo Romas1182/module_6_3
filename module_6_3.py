@@ -24,6 +24,9 @@ class Animal:
         else:
             print("Be careful, i'm attacking you 0_0")
 
+    def speak(self):
+         print(self.sound)
+
 class Bird(Animal):
     beak = True # клюв есть
     def lay_eggs(self):
@@ -43,9 +46,7 @@ class Duckbill(PoisonousAnimal, Bird, AquaticAnimal):
     sound = "Click-click-click" # утконос
     def __init__(self, speed):
         super().__init__(speed)
-    def speak(self):
-        print(self.sound)
-
+    
 db = Duckbill(10)
 
 
